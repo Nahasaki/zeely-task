@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button';
-import Sidebar from '@/features/BackgroundGeneration/Sidebar';
-import { useBackgroundGenerator } from '@/features/BackgroundGeneration/hooks/useBackgroundGenerator';
+import {
+  BackgroundGenerationSidebar,
+  useBackgroundGenerator,
+} from '@/features/BackgroundGeneration';
 
 function HomePage() {
   const { setOpen } = useBackgroundGenerator();
@@ -15,7 +17,7 @@ function HomePage() {
           </Button>
         </div>
       </div>
-      <Sidebar />
+      <BackgroundGenerationSidebar />
     </div>
   );
 }
