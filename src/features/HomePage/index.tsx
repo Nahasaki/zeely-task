@@ -5,11 +5,18 @@ import { useBackgroundGenerator } from '@/features/BackgroundGeneration/hooks/us
 function HomePage() {
   const { setOpen } = useBackgroundGenerator();
   return (
-    <>
-      <h1 className="text-4xl">Zeely Task</h1>
-      <Button onClick={() => setOpen(true)}>Change background</Button>
+    <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="text-center space-y-4">
+        <div className="text-5xl">✨</div>
+        <h1 className="text-4xl font-semibold tracking-tight">Zeely Task</h1>
+        <div>
+          <Button onClick={() => setOpen(true)} className="px-6">
+            Change background
+          </Button>
+        </div>
+      </div>
       <Sidebar />
-    </>
+    </div>
   );
 }
 
